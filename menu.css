@@ -1,0 +1,152 @@
+/* Custom Properties for Colors */
+:root {
+    --bg-pink: #9a4f6d; /* The main background pink from the image */
+    --text-color: #ffffff; /* White text for contrast */
+    --accent-color: #0b1d34; /* A deep color for headings */
+    --font-stack: 'Poppins', sans-serif;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-pink);
+    font-family: var(--font-stack);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex; /* Start from the top */
+    min-height: 100vh;
+}
+ /* Container for the Instagram ID and Cafe Name */
+.header-banner {
+    /* 1. Enable Flexbox */
+    display: flex; 
+    
+    /* 2. Align items horizontally in the center */
+    justify-content: center; 
+    
+    /* 3. Vertically align text in the center */
+    align-items: center; 
+    
+    /* Optional: Add some space below the header */
+    margin-bottom: 10px; 
+    
+}
+
+/* Style for the Instagram link text */
+.instagram-text {
+    /* Reduce heading size to match the cafe name better */
+    font-size: 1.5em; 
+    font-weight: normal; 
+    
+    /* Add space to the right of the Instagram ID */
+    margin-right: 15px; 
+    
+    /* Ensure no default margin from the h2 tag interferes */
+    margin-top: 0;
+    margin-bottom: 10;
+}
+
+/* Style for the main Cafe Name */
+.cafe-name {
+    /* Set desired font size */
+    font-size: 2em; 
+    
+    /* Ensure no default margin from the h1 tag interferes */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Basic link styling (to remove underline) */
+.instagram-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent (or set a specific color) */
+}
+.menu-container {
+    width: 100%;
+    max-width: 768px; /* Standard tablet/small screen size for a tall menu */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header/Logo Styling */
+.menu-header {
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.menu-header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-top: 5px;
+}
+
+.logo {
+    /* Style for the small logo image at the top */
+    width: 120px;
+    height: 120px;
+    
+     object-fit: contain;
+    /* This makes the image placeholder blend in better */
+    background-color: rgba(3, 3, 3, 0.95); 
+    border-radius: 50%;
+}
+
+/* Menu Grid Layout */
+
+.menu-grid {
+    display: grid;
+    /* Two columns for the menu items */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 10px; /* Space between rows and columns */
+    padding: 10px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Image Styling - The defining feature */
+.item-image {
+    width: 150px;
+    height: 150px;
+    /* Make the image perfectly circular */
+    border-radius: 50%; 
+    /* Ensure the image covers the circle without distortion */
+    object-fit: cover; 
+    /* Add a subtle glow/border effect like the screen in the photo */
+    border: 5px solid rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+/* Item Name Styling */
+.item-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    /* Add a text shadow to make the white text pop on the pink background */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+    padding: 5px 0;
+}
+
+/* Media Query for larger screens (e.g., desktop/kiosk view) */
+@media (min-width: 600px) {
+    .menu-grid {
+        gap: 30px 20px;
+    }
+    .item-image {
+        width: 200px;
+        height: 200px;
+    }
+    .item-name {
+        font-size: 1.5rem;
+    }
+}
+ 
